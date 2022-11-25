@@ -12,6 +12,7 @@ class App(customtkinter.CTk):
     super().__init__()
     self.title("The Guessing Game")
     self.geometry("400x240")
+    self.resizable(False,False)
 
     self.screen_count = 0
     self.elements = []
