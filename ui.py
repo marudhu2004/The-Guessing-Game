@@ -74,9 +74,9 @@ class App(customtkinter.CTk):
   def setup_game(self):
     guess = self.guesser.guess()
     self.question_text = customtkinter.CTkLabel(master=self,
-                                                text=f"is the number {guess}?  ({self.max_guess_count - self.guesser.tries} guesses left!)")
+                                                text=f"Is the number {guess}?  ({self.max_guess_count - self.guesser.tries} guesses left!)".center(70, " "))
     self.question_text.configure(font= ("Ariel", 10))
-    self.question_text.place(x=50, y=33)
+    self.question_text.place(x=10, y=33)
 
     self.high_btn = customtkinter.CTkButton(
       master=self,
@@ -116,7 +116,7 @@ class App(customtkinter.CTk):
     guess = self.guesser.guess()
     if self.guesser.tries > self.max_guess_count:
       self.finish_game()
-    self.question_text.configure(text=f"Is the number {guess}? ({self.max_guess_count - self.guesser.tries} guesses left!)")
+    self.question_text.configure(text=f"Is the number {guess}? ({self.max_guess_count - self.guesser.tries} guesses left!)".center(70, " "))
 
   def finish_game(self):
 
